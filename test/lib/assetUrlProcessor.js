@@ -5,8 +5,8 @@
  * @return {String} 处理后的模板内容
  */
 module.exports.process = function(config, templateContent,relativePath) {
-    var jsServer = config.jsServer;
-    var cssServer = config.cssServer;
+    var jsServer = config.jsServer + '/';
+    var cssServer = config.cssServer + '/';
     var publicAssetRefRegExp = /(<script([^>]*?)(src)\s*=\s*"gmlib([^>]*?)(>\s*<\s*\/script\s*>))|(<link([^>]*?)(href)\s*=\s*"gmlib([^>]*?)>)/gi;
     var privateAssetRefRegExp = /(<script([^>]*?)(src)\s*=\s*"\/js\/([^>]*?)(>\s*<\s*\/script\s*>))|(<link([^>]*?)(href)\s*=\s*"\/css\/([^>]*?)>)/gi;
 

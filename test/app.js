@@ -5,8 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var template = require('art-template-plus-plus');
-var project1Router = require('./routes/project1Router.js');
-var project2Router = require('./routes/project2Router.js');
+var project1Router = require('./router/project1Router.js');
+var project2Router = require('./router/project2Router.js');
 
 var app = express();
 
