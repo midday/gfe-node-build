@@ -35,7 +35,7 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-//gfeNodeBuild中间件
+//gfeNodeBuild
 var gfeNodeBuild = require('./lib/gfeNodeBuild.js');
 gfeNodeBuild.init(express, template, __dirname);
 

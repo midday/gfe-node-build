@@ -9,6 +9,7 @@ var assetUrlProcessor = require('./assetUrlProcessor.js');
  * @param {Object} 配置参数
  */
 module.exports.init = function(template, config) {
+    var defaults = template.defaults;
     var matchTargetRegExp = /var(\s*)source(\s*)=(\s*)fs\.readFileSync(.*?);/g;
     var assetUrlProcessMethod = 'assetUrlProcessor.process(config, source, relativePath);';
     var replacedMethodContent = template.readTemplate.toString();
