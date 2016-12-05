@@ -1,6 +1,6 @@
 {
   "name": "gfe-node-build",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "gfe node build",
   "homepage": "https://github.com/midday/gfe-node-build",
   "main": "./index.js",
