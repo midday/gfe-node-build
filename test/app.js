@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var template = require('art-template-plus-plus');
+var template = require('gfe-art-template');
 var project1Router = require('./router/project1Router.js');
 var project2Router = require('./router/project2Router.js');
 
