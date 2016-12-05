@@ -1,7 +1,7 @@
 {
   "name": "gfe-node-build",
-  "version": "1.0.0",
-  "description": "gfe node build midleware",
+  "version": "1.0.1",
+  "description": "gfe node build",
   "homepage": "https://github.com/midday/gfe-node-build",
   "main": "./index.js",
   "keywords": [

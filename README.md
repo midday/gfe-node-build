@@ -9,7 +9,7 @@
 
 ## 安装
 ```
-npm install express-ssi
+npm install gfe-node-build
 ```
 
 ## 使用
@@ -42,7 +42,7 @@ gfeNodeBuild.init(express, template, __dirname);
 
     //js插入的位置，取值：insertHead和insertBody
     jsPlace: "insertBody"
-}
+};
 ```
 
 MIT
