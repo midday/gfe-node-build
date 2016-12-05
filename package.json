@@ -1,0 +1,23 @@
+{
+  "name": "gfe-node-build",
+  "version": "1.0.0",
+  "description": "gfe node build midleware",
+  "homepage": "https://github.com/midday/gfe-node-build",
+  "main": "./index.js",
+  "keywords": [
+	"gfe",
+    "node",
+    "build",
+    "middleware"
+  ],
+  "author": "midday<598535774@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/midday/gfe-node-build.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "sync-request": "^3.0.1",
+    "content-type": "~1.0.2"
+  } 
+}

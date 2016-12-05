@@ -1,0 +1,13 @@
+{
+    "projectPath": "gmpro/2.0.0/project/1.0.0",
+    "projectFolder": "css|js|widget",
+    "projectApp": "image",
+    "tplPath": "WEB-INF/template/project",
+    "tplFolder": "html",
+    "tplApp": "channel_web",
+    "svnPath": {
+        "trunk": "https://repo.ds.gome.com.cn:8443/svn/atg_poc/30_Coding/NewDevMode/trunk/gome-gfe/",
+        "branch": "https://repo.ds.gome.com.cn:8443/svn/atg_poc/30_Coding/NewDevMode/branches/gome-gfe/",
+        "tag": "https://repo.ds.gome.com.cn:8443/svn/atg_poc/30_Coding/NewDevMode/tags/gome-gfe/"
+    }
+}

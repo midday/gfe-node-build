@@ -1,0 +1,21 @@
+{
+    "projectName": "test",
+    "projectPath": "gmpro/2.0.0/test/1.0.0",
+    "projectFolder": "css|js",
+    "projectApp": "image",
+    "tplPath": "static",
+    "tplFolder": "html",
+    "tplApp": "test",
+    "svnPath": {
+        "trunk": "https://repo.ds.gome.com.cn:8443/svn/atg_poc/30_Coding/NewDevMode/trunk/gome-gfe/single-web",
+        "branch": "https://repo.ds.gome.com.cn:8443/svn/atg_poc/30_Coding/NewDevMode/branches/gome-gfe/single-web",
+        "tag": "https://repo.ds.gome.com.cn:8443/svn/atg_poc/30_Coding/NewDevMode/tags/gome-gfe/single-web"
+    },
+    "build": {
+        "jsPlace": "insertBody"
+    },
+    "output": {
+        "cssMd5": false,
+        "jsMd5": false
+    }
+}
