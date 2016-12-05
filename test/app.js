@@ -37,7 +37,7 @@ app.use(function(req, res, next) {
 
 //gfeNodeBuild
 var gfeNodeBuild = require('./lib/gfeNodeBuild.js');
-gfeNodeBuild.init(express, template, __dirname);
+gfeNodeBuild.init(express);
 
 // error handlers
 
