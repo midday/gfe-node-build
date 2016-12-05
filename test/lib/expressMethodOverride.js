@@ -2,6 +2,7 @@ var request = require('sync-request');
 var contentType = require('content-type');
 var ssiParser = require('./ssiParser.js');
 var jsPlaceProcessor = require('./jsPlaceProcessor.js');
+var assetUrlProcessor = require('./assetUrlProcessor.js');
 
 /**
  * expressMethodOverwrite init方法
@@ -12,15 +13,18 @@ module.exports.init = function(express, config) {
     var ssiServer = config.ssiServer;
 
     var matchTargetRegExp = /function(\s*?)((send)*)(\s*?)\(body\)(\s*?)\{/g;
+    var assetUrlProcessMethod = 'assetUrlProcessor.process(config, body);';
     var ssiParseMethod = 'ssiParser.parse(config, body);';
     var jsPlaceProcessMethod = 'jsPlaceProcessor.process(config,body);';
     var replacedMethodContent = express.response.send.toString();
 
     //覆盖express中response的send方法，注入逻辑代码，生成新的send方法
     var newMethodContent = replacedMethodContent.replace(matchTargetRegExp, function(matchContent) {
-        return matchContent + 
+        return matchContent +
             'if(typeof(body) === "string"){' +
-            'body = ' + ssiParseMethod + 'body = ' + jsPlaceProcessMethod +
+            'body = ' + assetUrlProcessMethod +
+            'body = ' + ssiParseMethod +
+            'body = ' + jsPlaceProcessMethod +
             '}';
     });
 
