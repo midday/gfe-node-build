@@ -15,17 +15,13 @@ npm install gfe-node-build
 ## 使用
 ```javascript
 var gfeNodeBuild = require('gfe-node-build');
-gfeNodeBuild.init(express, template, __dirname);
+gfeNodeBuild.init(express);
 ```
 
 ## 方法
-#### init(express, template, appContextPath, options)
+#### init(express, options)
 
 *express* `Object` express 对象
-
-*template* `Object` artTemplate 对象
-
-*appContextPath* `Object` 应用启动文件的目录
 
 *options* `Object` 配置参数对象，如果必要请覆盖相应配置项，默认值如下：
 
