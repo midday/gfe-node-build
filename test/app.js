@@ -23,7 +23,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '')));
+app.use(express.static(path.join(__dirname, 'static')));
 
 app.use('/', project1Router);
 app.use('/', project2Router);

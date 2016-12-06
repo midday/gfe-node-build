@@ -1,15 +1,13 @@
 /**
- * 解析body内容，为公共组件js、css添加域名，为私有js、css添加相对路径
- * @param  {Object} 配置参数对象
- * @param  {Object} 页面内容
- * @return {String} 处理后的页面内容
+ * 陆芒脦枚body脛脷脠脻拢卢脦陋鹿芦鹿虏脳茅录镁js隆垄css脤铆录脫脫貌脙没拢卢脦陋脣陆脫脨js隆垄css脤铆录脫脧脿露脭脗路戮露
+ * @param  {Object} 脜盲脰脙虏脦脢媒露脭脧贸
+ * @param  {Object} 脪鲁脙忙脛脷脠脻
+ * @return {String} 麓娄脌铆潞贸碌脛脪鲁脙忙脛脷脠脻
  */
 module.exports.process = function(config, pageContent) {
     var jsServer = config.jsServer + '/';
     var cssServer = config.cssServer + '/';
-    var privateAssetPrefix = '/static';
     var publicAssetRefRegExp = /(<script([^>]*?)(src)\s*=\s*"gmlib([^>]*?)(>\s*<\s*\/script\s*>))|(<link([^>]*?)(href)\s*=\s*"gmlib([^>]*?)>)/gi;
-    var privateAssetRefRegExp = /(<script([^>]*?)(src)\s*=\s*"\/js\/([^>]*?)(>\s*<\s*\/script\s*>))|(<link([^>]*?)(href)\s*=\s*"\/css\/([^>]*?)>)/gi;
 
     pageContent = pageContent.replace(publicAssetRefRegExp, function(publicAssetRef) {
         if (~publicAssetRef.indexOf("link")) {
@@ -24,11 +22,7 @@ module.exports.process = function(config, pageContent) {
         }
 
         return publicAssetRef;
-    }).replace(privateAssetRefRegExp, function(privateAssetReg) {
-        privateAssetReg = privateAssetReg.replace(/(\s*href\s*=\s*")|(\s*src\s*=\s*")/, function(matchContent) {
-            return matchContent + privateAssetPrefix;
-        });
-        return privateAssetReg;
     });
+   
     return pageContent;
 };

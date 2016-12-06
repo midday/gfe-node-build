@@ -1,8 +1,8 @@
 # gfe-node-build
 
-如果后端应用框架为 `express` 、后端模板引擎为 `artTemplate` 、前端集成解决方案为 `GFE` ，那么进行 node 本地调试时需要解决下面三个问题：
+如果后端应用框架为 `express`、前端集成解决方案为 `GFE`，那么进行 node 本地调试时需要解决下面三个问题：
 - ssi 标签解析(本地调试时页面的ssi标签动态拉取 uat 环境内容)
-- 静态资源 js、css 路径处理(本地调试时 js、css 前面添加 /static/)
+- 公共组件 js、css 路径处理(组件前添加uat服务器server)
 - js 位置的动态处理(本地调试时将 js 脚本位置放到 body 标签之前)
 
 而 `gfe-node-build` 恰好解决了以上三个问题
@@ -38,7 +38,7 @@ gfeNodeBuild.init(express);
 
     //js插入的位置，取值：insertHead和insertBody
     jsPlace: "insertBody"
-};
+}
 ```
 
 MIT
