@@ -6,7 +6,7 @@
  */
 module.exports.process = function(config, pageContent) {
     var jsPlace = config.jsPlace;
-    var srcScriptRegExp = /<script([^>]*)(src)([^>]*)>(((?!<\/script>)[\s\S])*)<\/script>/gi;
+    var srcScriptRegExp = /(<script([^>]*)(src)([^>]*)>(((?!<\/script>)[\s\S])*)<\/script>)|(<\!--\[if\s)(((?!<\!\[endif\]-->)[\s\S])*)<script(((?!<\!\[endif\]-->)[\s\S])*)(<\!\[endif\]-->)/gi;
     var inbottomScriptRegExp = /<script([^>]*)(inbottom)([^>]*)>(((?!<\/script>)[\s\S])*)<\/script>/gi;
     var srcScripts = [];
     var inbottomScripts = [];
