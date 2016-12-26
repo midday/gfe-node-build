@@ -31,5 +31,8 @@ module.exports.process = function(config, pageContent) {
         pageContent = pageContent.replace('<\/body>', inbottomScripts.join('\r\n') + '<\/body>');
     }
 
+    //添加gfe全局变量
+    pageContent = pageContent.replace('<\/head>', '<script>var gfeJsCdn = "",gfeJsCdn = "",gfeProjectPath = "";</script>\r\n<\/head>');
+
     return pageContent;
 };
